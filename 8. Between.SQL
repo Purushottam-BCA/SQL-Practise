@@ -17,6 +17,16 @@ ANSWER  :  select * from emp where HIREDATE BETWEEN '1-JAN-1981' AND '1-AUG-1981
       7782 CLARK      MANAGER         7839 09-JUN-81       3000          1
 
 
+SQL> select * from emp where HIREDATE BETWEEN TO_DATE ('1981/01/01','yyyy/mm/dd') AND TO_DATE ('1981/08/01','yyyy/mm/dd');
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       3600          3
+      7521 WARD       SALESMAN        7698 22-FEB-81       3250          3
+      7566 JONES      MANAGER         7839 02-APR-81       3000          2
+      7698 BLAKE      MANAGER         7839 01-MAY-81       5000          3
+      7782 CLARK      MANAGER         7839 09-JUN-81       3000          1
+      
 /*------------------------------------------------------------------------------------*/
 				
 □ Always start with min_value & go to Max_value else it will not work properly.  
